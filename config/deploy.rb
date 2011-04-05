@@ -20,7 +20,7 @@ set :deploy_via, :remote_cache
 
 
 set :server_ip, "node"
-set :deploy_to, "/home/binaryseed/srv/comopolo_cap"
+set :deploy_to, "/home/binaryseed/srv/comopolo.com"
 server server_ip, :app, :web, :db, :primary => true
 
 
