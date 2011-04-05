@@ -1,4 +1,4 @@
-RAILS_GEM_VERSION = '2.3.9' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
@@ -11,7 +11,7 @@ Rails::Initializer.run do |config|
   config.frameworks -= [:active_resource]
   config.action_controller.session = {:key => CONFIG['session_key'], :secret => CONFIG['session_secret']}
   config.gem "paperclip", :version => "2.3.0"
-  config.gem "right_aws", :version => "1.9.0"
+  # config.gem "right_aws", :version => "1.9.0"
   config.gem "right_http_connection", :version => "1.2.4"
   config.gem "searchlogic", :version => "2.3.9"
   config.gem "will_paginate", :version => "2.3.15"
