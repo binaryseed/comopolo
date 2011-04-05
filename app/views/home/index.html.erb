@@ -1,5 +1,5 @@
 <div class="home-left">
-  <%= render :partial => 'messages/mini' if enabled?('forum') %>
+  <%= render :partial => 'messages/mini' if logged_in? and enabled?('forum') %>
   <%= render :file => 'topics/index' if enabled?('forum') %>
 </div>
 

@@ -1,5 +1,6 @@
 <% post = @post unless @post.nil? %>
-<table class="thread" cellspacing="0" id="p<%= post.id %>">
+
+<table class="thread <% if is_new?(post) %>new<% end %>" cellspacing="0" id="p<%= post.id %>">
   <thead>
     <tr>
       <th><%= time_ago_or_time_stamp(post.created_at, Time.now.utc, true, true) %></th>

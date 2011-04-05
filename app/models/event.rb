@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
   named_scope :reminders, lambda {|*args| {:conditions => {:reminder => true, :date => Time.now.utc-2.hours..Time.now.utc+6.hours}, :order => 'date asc'}}
   
   def to_s
-    title
+    "#{title} at #{date.strftime("%I:%M %p")}"
   end
   
   def to_param

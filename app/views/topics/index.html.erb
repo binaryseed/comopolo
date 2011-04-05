@@ -35,20 +35,24 @@
           <td class="tci"><%= icon_for(topic) %></td>
           <td class="tcl">
             <span class="topic-status"><%= I18n.t(:sticky) if topic.sticky? %> <%= I18n.t(:locked) if topic.locked? %></span>
-            <%= link_to h(topic), topic %> <%=t :by %> <%=h topic.user %>
+            <%= link_to h(topic), topic %> <%=t :by %> <%= link_to h(topic.user), topic.user %>
           </td>
           <% if %w(categories topics).include?(current_controller) %>
             <td class="tcl">
               <%= link_to h(topic.forum), topic.forum %>
             </td>
           <% end %>
-          <td class="tcm"><%= number_with_delimiter(topic.replies) %></td>
+          <td class="tcm"><%= number_with_delimiter(topic.replies) %> 
+			<% if is_new?(topic) %>
+			(<%= link_to "new", show_new_topic_path(topic) %>)
+			<% end %>
+		  </td>
           <% unless current_controller == 'home' %>
             <td class="tcm"><%= number_with_delimiter(topic.views) %></td>
           <% end %>
           <td class="tcr">
-            <%= link_to time_ago_or_time_stamp(topic.last_post_at), show_new_topic_path(topic) %> 
-            <%=t :by %> <%=h topic.last_poster %>
+			<%= link_to h(topic.last_poster), topic.last_poster %>
+            <%= time_ago_or_time_stamp(topic.last_post_at) %> 
           </td>
         </tr>
       <% end %>

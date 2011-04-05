@@ -26,19 +26,19 @@ h3{font-size:14px;font-weight:400;}
 .nav{height:26px;border:1px solid #ccc;background:#f1f1f1;margin:10px 0;}
 .nav-left{float:left;margin:6px 0 0 5px;}
 .nav-right{float:right;margin:6px 5px 0 0;}
-.nav-stats{color:#999;border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:0 1px 7px;}
+.nav-stats{color:#999;border-top:1px solid #ccc;padding:0 1px;}
 .nav-stats p.nav-left{width:70%;}
-.box{border:1px solid #35604d;margin-bottom:10px;background:#f1f1f1;padding:0 10px;}
-.box .top{display:block;background:#35604d;color:#fff;margin:0 -10px;padding:4px 5px;}
+.box{border:1px solid #443531;margin-bottom:10px;background:#f1f1f1;padding:0 10px;}
+.box .top{display:block;background:#443531;color:#fff;margin:0 -10px;padding:4px 5px;}
 .box .label{margin-bottom:-10px;}
 .box-comment{margin-left:6px;}
 .text-field{width:66%;}
-table{width:100%;border:1px solid #35604d;margin-bottom:10px;}
-thead th{background:#35604d;color:#fff;text-align:left;font-weight:400;padding:4px 5px;}
+table{width:100%;border:1px solid #443531;margin-bottom:10px;}
+thead th{background:#443531;color:#fff;text-align:left;font-weight:400;padding:4px 5px;}
 tbody{background:#f1f1f1;}
 tbody td{vertical-align:top;border-top:1px solid #cedeb9;border-right:1px solid #cedeb9;padding:5px;}
 tbody .tci{width:10px !important;border-right:0;}
-tbody .tcm{text-align:center;background:#dedfdf;}
+tbody .tcm{text-align:left;background:#dedfdf;}
 .forums-index .tcm{vertical-align:middle;width:8%;}
 tbody .tcr{border-right:0;}
 tbody .tds{border:0;padding:10px;}
@@ -57,7 +57,7 @@ tbody .tds{border:0;padding:10px;}
 .forums-admin ul ul{margin-left:15px;}
 .forum-name{font-weight:700;font-size:12px;}
 .topic-status{font-size:9px;}
-.topics-index .tcm{width:7%;}
+.topics-index .tcm{width:11%;}
 .topics-index .tcr{width:27%;}
 .topics-index .tcf{width:14%;}
 #primary{float:left;width:550px;margin:6px 10px 0 0;}
@@ -95,7 +95,8 @@ cite{font-weight:700;font-style:normal;}
 .avatar-list .avatar{float:left;margin:18px;}
 .chk{float:left;margin:0 6px 10px 0;}
 .inline{float:right;width:32%;height:130px;border:1px solid #ccc;}
-.thread dd.avatar img,.profile-avatar img,.avatar-list .avatar img{max-width:150px;}
+.thread dd.avatar img{max-width:60px;max-height:60px;}
+.profile-avatar img,.avatar-list .avatar img{max-width:150px;}
 .home-left{float:left;width:68%;}
 .home-right{float:right;width:30%;}
 .home-left .topics-index .tcr{width:40%;}
@@ -103,12 +104,12 @@ cite{font-weight:700;font-style:normal;}
 .dayName th{background:#d1d1d1;color:#333;width:14%;}
 .otherMonth{color:#ccc;}
 .specialDay p{text-align:left;margin:2px 0 4px;}
-.reminders{background:#35604d;color:#fff;text-align:center;margin-bottom:10px;padding:4px;}
+.reminders{background:#5e1c1a;color:#fff;text-align:center;margin-bottom:10px;padding:4px;}
 .wrapper-footer{text-align:center;color:#999;}
 .icon{border-color:#E6E6E6 #DEDEDE #DADADA #E2E2E2;border-style:solid;border-width:6px;margin:0 -3px 0 2px;}
 .inew{border-color:#8BB453 #7A9E48 #709142 #799C47;}
 .prototip{position:absolute;}
-.tooltip{position:relative;color:#fff;background-color:#35604d;padding:4px 5px;}
+.tooltip{position:relative;color:#fff;background-color:#443531;padding:4px 5px;}
 .post-body img{max-width:100%;}
 .post-body blockquote img{max-width:532px;}
 .post-body blockquote blockquote img{max-width:498px;}
@@ -123,7 +124,7 @@ cite{font-weight:700;font-style:normal;}
 .calendar_date_select .cds_header a.prev{float:left;margin:0 2px;padding:4px 7px;}
 .calendar_date_select .cds_header a.next{float:right;margin:0 2px;padding:4px 7px;}
 .calendar_date_select .cds_header a.close{float:right;display:none;}
-.calendar_date_select .cds_header a.prev:hover,.calendar_date_select .cds_header a.next:hover{background:#35604d;color:#fff;text-decoration:none;}
+.calendar_date_select .cds_header a.prev:hover,.calendar_date_select .cds_header a.next:hover{background:#443531;color:#fff;text-decoration:none;}
 #notice,#error{border:1px solid #999;background:#eee;margin-bottom:10px;}
 #notice{background-color:#FBFBB1;text-align:center;padding:5px 0;}
 #errorExplanation{border:1px solid #333;background-color:#f1f1f1;margin-bottom:10px;}
@@ -134,7 +135,7 @@ cite{font-weight:700;font-style:normal;}
 .nav-footer,.box .small{margin:0 0 10px;}
 .box label,.thread dd.rank,.today,.calendar_date_select td.today{font-weight:700;}
 thead th a:link,thead th a:visited,.reminders a{color:#fff;}
-thead .tcm,.avatar-list,.avatar-show,.center{text-align:center;}
+.avatar-list,.avatar-show,.center{text-align:center;}
 .thread,.forums-index,.forums-admin ul ul li{margin-bottom:5px;}
 .thread td,.messages-index{border:0;}
 .thread dl,.messages-index p{margin:0;}
@@ -168,3 +169,10 @@ pre .addition{background:#dfd;}
 pre .diff .change{background:#0086b3;}
 pre .chunk{color:#aaa;}
 pre .class .title,pre .class{color:#458;font-weight:700;}
+
+
+/* Additions */
+.thread th {background:#7f6d67;}
+.thread.new th {background:#443531;}
+
+

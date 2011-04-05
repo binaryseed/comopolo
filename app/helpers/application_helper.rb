@@ -76,6 +76,9 @@ module ApplicationHelper
     if item.is_a?(Topic)
       viewing = item.viewings.select {|v| v.user_id == current_user.id}.first
       (viewing.nil? || viewing.updated_at < item.updated_at) && current_user.all_viewed_at < item.updated_at
+	elsif item.is_a?(Post)
+      viewing = item.topic.viewings.select {|v| v.user_id == current_user.id}.first
+      (viewing.nil? || viewing.updated_at < item.created_at) && current_user.all_viewed_at < item.created_at
     else
       session[:online_at] < item.updated_at
     end
