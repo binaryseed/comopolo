@@ -9,7 +9,6 @@
 /config/config.yml
 /config/database.yml
 /config/smtp.yml
-/config/deploy.rb
 /db/*.sqlite3
 /public/avatars/*
 /public/files/*
