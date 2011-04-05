@@ -1,3 +1,9 @@
+COMOPOLO.com
+============
+
+This is an implementation of El Dorado that is running COMOPOLO's group site.
+
+
 El Dorado
 =========
 
@@ -8,43 +14,6 @@ avatars, themes, and privacy settings.
 - Code: <http://github.com/trevorturk/eldorado/>
 - Demo and support site: <http://eldorado.heroku.com/>
 - Examples: <http://wiki.github.com/trevorturk/eldorado/> # add your site!
-
-
-Screenshot
-----------
-
-![Screenshot](http://s3.amazonaws.com/trevorturk/eldorado.png)
-
-
-Install
-----------
-
-    git clone git://github.com/trevorturk/eldorado.git
-    cd eldorado
-    cp config/database.example.yml config/database.yml
-    cp config/config.example.yml config/config.yml
-    gem install rails -v=2.3.9
-    rake gems:install
-    rake db:create
-    rake db:schema:load
-    script/server
-
-Visit <http://localhost:3000/> to see the app running locally.
-
-
-Deploy
-------
-
-Deploy the app to Heroku:
-
-    gem install heroku
-    heroku create
-    # set the variables for your production environment in config/config.yml
-    rake s3:create
-    rake heroku:config
-    git push heroku master
-    heroku rake db:schema:load
-    heroku open
 
 
 MIT License
