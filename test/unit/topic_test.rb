@@ -1,3 +1,20 @@
+# == Schema Info
+#
+# Table name: topics
+#
+#  id           :integer         not null, primary key
+#  user_id      :integer
+#  title        :string(255)
+#  created_at   :datetime
+#  views        :integer         default(0)
+#  posts_count  :integer         default(0)
+#  last_post_id :integer
+#  last_post_at :datetime
+#  last_post_by :integer
+#  locked       :boolean
+#  sticky       :boolean
+#  forum_id     :integer
+
 require 'test_helper'
 
 class TopicTest < ActiveSupport::TestCase

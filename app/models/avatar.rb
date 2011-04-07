@@ -1,3 +1,17 @@
+# == Schema Info
+#
+# Table name: avatars
+#
+#  id                      :integer         not null, primary key
+#  user_id                 :integer
+#  current_user_id         :integer
+#  created_at              :datetime
+#  updated_at              :datetime
+#  attachment_file_name    :string(255)
+#  attachment_content_type :string(255)
+#  attachment_file_size    :integer
+#  attachment_remote_url   :string(255)
+
 class Avatar < ActiveRecord::Base
   
   include PaperclipSupport

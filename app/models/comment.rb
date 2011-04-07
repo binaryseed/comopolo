@@ -1,3 +1,15 @@
+# == Schema Info
+#
+# Table name: comments
+#
+#  id            :integer         not null, primary key
+#  user_id       :integer
+#  resource_id   :integer
+#  resource_type :string(255)
+#  body          :text
+#  created_at    :datetime
+#  updated_at    :datetime
+
 class Comment < ActiveRecord::Base
 
   attr_accessible :resource_id, :resource_type, :body

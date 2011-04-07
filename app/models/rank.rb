@@ -1,3 +1,11 @@
+# == Schema Info
+#
+# Table name: ranks
+#
+#  id        :integer         not null, primary key
+#  title     :string(255)
+#  min_posts :integer
+
 class Rank < ActiveRecord::Base
   
   attr_accessible :title, :min_posts

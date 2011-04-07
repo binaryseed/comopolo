@@ -1,3 +1,15 @@
+# == Schema Info
+#
+# Table name: forums
+#
+#  id           :integer         not null, primary key
+#  category_id  :integer
+#  name         :string(255)
+#  description  :text
+#  topics_count :integer         default(0)
+#  posts_count  :integer         default(0)
+#  position     :integer         default(0)
+
 class Forum < ActiveRecord::Base
     
   attr_accessible :category_id, :name, :description, :position

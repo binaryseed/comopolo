@@ -1,3 +1,13 @@
+# == Schema Info
+#
+# Table name: viewings
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  topic_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+
 require 'test_helper'
 
 class ViewingTest < ActiveSupport::TestCase

@@ -1,3 +1,20 @@
+# == Schema Info
+#
+# Table name: settings
+#
+#  id                :integer         not null, primary key
+#  title             :string(255)
+#  tagline           :string(255)
+#  announcement      :text
+#  footer            :text
+#  theme             :string(255)
+#  favicon           :string(255)
+#  time_zone         :string(255)
+#  private           :boolean
+#  login_message     :string(255)
+#  admin_only_create :string(255)     not null, default("")
+#  clickable_header  :boolean
+
 require 'test_helper'
 
 class SettingTest < ActiveSupport::TestCase

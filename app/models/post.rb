@@ -1,3 +1,15 @@
+# == Schema Info
+#
+# Table name: posts
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer
+#  topic_id   :integer
+#  body       :text
+#  created_at :datetime
+#  updated_at :datetime
+#  updated_by :integer
+
 class Post < ActiveRecord::Base
   
   attr_accessible :topic_id, :body, :title, :forum_id, :locked, :sticky, :subscribe

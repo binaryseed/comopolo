@@ -1,3 +1,16 @@
+# == Schema Info
+#
+# Table name: uploads
+#
+#  id                      :integer         not null, primary key
+#  user_id                 :integer
+#  created_at              :datetime
+#  updated_at              :datetime
+#  attachment_file_name    :string(255)
+#  attachment_content_type :string(255)
+#  attachment_file_size    :integer
+#  attachment_remote_url   :string(255)
+
 require 'test_helper'
 
 class UploadTest < ActiveSupport::TestCase

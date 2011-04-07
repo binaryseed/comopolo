@@ -1,3 +1,11 @@
+# == Schema Info
+#
+# Table name: subscriptions
+#
+#  id       :integer         not null, primary key
+#  user_id  :integer
+#  topic_id :integer
+
 require 'test_helper'
 
 class SubscriptionTest < ActiveSupport::TestCase

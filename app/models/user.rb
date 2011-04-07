@@ -1,3 +1,29 @@
+# == Schema Info
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  login              :string(255)
+#  email              :string(255)
+#  password_hash      :string(255)
+#  created_at         :datetime
+#  admin              :boolean
+#  posts_count        :integer         default(0)
+#  signature          :string(255)
+#  bio                :text
+#  profile_updated_at :datetime
+#  online_at          :datetime
+#  avatar             :string(255)
+#  auth_token         :string(255)
+#  auth_token_exp     :datetime
+#  time_zone          :string(255)
+#  ban_message        :string(255)
+#  banned_until       :datetime
+#  chatting_at        :datetime
+#  logged_out         :boolean
+#  articles_count     :integer         default(0)
+#  all_viewed_at      :datetime
+
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
