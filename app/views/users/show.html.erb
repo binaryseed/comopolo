@@ -6,6 +6,7 @@
     <span class="profile-title"><%=h @user %></span>&nbsp;
     <span class="profile-rank"><%=h rank_for(@user) %> &mdash; <%= link_to t_no_of( :no_of_posts, @user.posts_count ), user_posts_path(@user) %></span>
   </div>
+  <h3><%=h @user.club %></h3>
   
   <div class="profile-bio">
     <p><%=h @user.bio %></p>

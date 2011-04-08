@@ -18,6 +18,7 @@
       <td class="profile">
         <dl>
           <dt><%= link_to h(post.user), post.user %></dt>
+          <dd class="club"><%= post.user.club %></dd>
           <dd class="rank"><%= rank_for(post.user) %></dd>
           <dd class="avatar">
             <%= link_to avatar_for(post.user), post.user unless post.user.avatar.nil? %>
