@@ -23,7 +23,6 @@
           <dd class="avatar">
             <%= link_to avatar_for(post.user), post.user unless post.user.avatar.nil? %>
           </dd>
-          <dd><%=t :registered %>: <%= I18n.l(post.user.created_at, :format => :ed_month) %></dd>
           <% unless post.user.is_online? %>
             <dd><%=t :last_visit %>: <%= time_ago_or_time_stamp(post.user.online_at) %></dd>
           <% end %>
