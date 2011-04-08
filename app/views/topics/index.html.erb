@@ -43,7 +43,6 @@
             </td>
           <% end %>
           <td class="tcm">
-			<%= number_with_delimiter(topic.replies) %> 
 			<% if is_new?(topic) %>
 				<%= link_to number_with_delimiter(topic.replies), show_new_topic_path(topic) %>
 			<% else %>
