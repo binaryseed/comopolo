@@ -38,7 +38,7 @@ thead th{background:#443531;color:#fff;text-align:left;font-weight:400;padding:4
 tbody{background:#f1f1f1;}
 tbody td{vertical-align:top;border-top:1px solid #cedeb9;border-right:1px solid #cedeb9;padding:5px;}
 tbody .tci{width:10px !important;border-right:0;}
-tbody .tcm{text-align:left;background:#dedfdf;}
+tbody .tcm{text-align:center;background:#dedfdf;}
 .forums-index .tcm{vertical-align:middle;width:8%;}
 tbody .tcr{border-right:0;}
 tbody .tds{border:0;padding:10px;}
