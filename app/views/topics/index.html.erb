@@ -36,11 +36,10 @@
           <td class="tcl">
             <span class="topic-status"><%= I18n.t(:sticky) if topic.sticky? %> <%= I18n.t(:locked) if topic.locked? %></span>
 			<% if is_new?(topic) %>
-				<strong><%= link_to h(topic), topic %></strong>
+				<strong><%= link_to h(topic), topic %> <%=t :by %> <%= link_to h(topic.user), topic.user %></strong>
 			<% else %>
-				<%= link_to h(topic), topic %>
+				<%= link_to h(topic), topic %> <%=t :by %> <%= link_to h(topic.user), topic.user %>
 			<% end %>
- 			<%=t :by %> <%= link_to h(topic.user), topic.user %>
           </td>
           <% if %w(categories topics).include?(current_controller) %>
             <td class="tcl">
