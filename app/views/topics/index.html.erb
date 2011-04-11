@@ -44,7 +44,7 @@
           <% end %>
           <td class="tcm">
 			<% if is_new?(topic) %>
-				<%= link_to number_with_delimiter(topic.replies), show_new_topic_path(topic) %>
+				<strong><%= link_to number_with_delimiter(topic.replies), show_new_topic_path(topic) %></strong>
 			<% else %>
 				<%= number_with_delimiter(topic.replies) %> 
 			<% end %>
