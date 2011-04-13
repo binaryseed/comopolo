@@ -5,7 +5,7 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 set :rvm_type, :user
-
+set :rvm_ruby_string, '1.9.2@comopolo'
 
 set :user, "binaryseed"
 set :application, "comopolo"
@@ -14,7 +14,7 @@ set :use_sudo, false
 
 
 set :scm, :git
-set :repository,  "git@github.com:binaryseed/comopolo.com.git"
+set :repository,  "git@github.com:binaryseed/comopolo.git"
 set :branch, :master
 set :deploy_via, :remote_cache
 
