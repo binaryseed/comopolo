@@ -15,4 +15,5 @@
 /public/headers/*
 /public/themes/*
 .powrc
+.rvmrc
 config.ru
