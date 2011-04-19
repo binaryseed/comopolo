@@ -10,7 +10,7 @@ class TopicsController < ApplicationController
   
   def show
     @topic = Topic.find(params[:id], :include => :forum)
-    @posts = @topic.posts.paginate(:page => params[:page], :include => :user)
+    @posts = @topic.posts.paginate(:page => params[:page], :include => :user, :per_page => 100)
     redirect_to @topic if @posts.blank? # if params[:page] is too big, no posts will be found
     @page = params[:page] ? params[:page] : 1
     @padding = ((@page.to_i - 1) * 100) # to get post #s w/ pagination
