@@ -13,7 +13,7 @@ class TopicsController < ApplicationController
     @posts = @topic.posts.paginate(:page => params[:page], :include => :user)
     redirect_to @topic if @posts.blank? # if params[:page] is too big, no posts will be found
     @page = params[:page] ? params[:page] : 1
-    @padding = ((@page.to_i - 1) * 30) # to get post #s w/ pagination
+    @padding = ((@page.to_i - 1) * 100) # to get post #s w/ pagination
     @topic.hit!
 	render
 	@topic.viewed_by(current_user) if logged_in?

@@ -48,7 +48,7 @@ class Post < ActiveRecord::Base
   def page
     posts = Post.find_all_by_topic_id(self.topic_id, :select => 'id', :order => 'created_at').map(&:id)
     post_number = posts.rindex(self.id) + 1
-    (post_number.to_f / 30).ceil
+    (post_number.to_f / 100).ceil
   end
   
   def to_s
