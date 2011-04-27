@@ -4,6 +4,7 @@
 </div>
 
 <div class="home-right">
+  <%= render :file => 'shared/info' %>
   <%= render :file => 'articles/list' if enabled?('blog') %>
   <%= render :partial => 'events/mini' if enabled?('events') %>
   <%= render :file => 'uploads/index' if enabled?('files') %>
