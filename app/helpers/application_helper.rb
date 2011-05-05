@@ -92,8 +92,12 @@ module ApplicationHelper
     end
   end
 
+  def remove_non_ascii(str)
+	str.gsub(/[\x80-\xff]/,"")
+  end
+
   def bb(text)
-    auto_link(simple_format(bbcodeize(sanitize(h(text))))) {|t| truncate(t, :length => 50)}
+    auto_link(simple_format(bbcodeize(sanitize(h(remove_non_ascii(text)))))) {|t| truncate(t, :length => 50)}
   end
 
   def current_page(collection)
