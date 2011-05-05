@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   def create
     @topic = Topic.find(params[:post][:topic_id]) if params[:post]
     redirect_to root_path and return false unless @topic
+    params[:post][:body] = remove_non_ascii(params[:post][:body])
     @post = current_user.posts.build(params[:post])
     if @topic.locked
       redirect_to root_path and return false unless admin? || (current_user == @topic.user) # TODO can this be a conditional before_filter?
