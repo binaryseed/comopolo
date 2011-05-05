@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    render :action => :new and return false unless params[:name].empty? #honeypot capatcha. field must be blank
     @user = User.new(params[:user])
     render :action => :new and return false unless @user.save
     if logged_in?
