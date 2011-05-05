@@ -9,6 +9,8 @@
     <p><%= f.text_field :club, :style => "width:31%", :value => "COMOPOLO" %></p>
     <p class="label"><label for="user_email"><%=t :email %></label></p>
     <p><%= f.text_field :email, :style => "width:31%" %></p>
+    <p class="label"><label for="user_name">Leave this blank</label></p>
+    <p><%= f.text_field :name, :style => "width:31%" %></p>
     <p class="label"><label for="user_password"><%=t :password_twice %></label></p>
     <p>
       <%= f.password_field :password, :style => "width:15%" %> &nbsp;
